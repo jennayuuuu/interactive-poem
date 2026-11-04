@@ -1,5 +1,44 @@
 /* styles.css */
 
-* {
-	font-family: Arial;
+body {
+  font-family: "Redaction 35", serif;
+  margin: 1rem;
+  padding: 0;
+  background-color: #000000;
+  color:aliceblue;
+  text-shadow: 0 0 6px aliceblue,
+    0 0 16px #7fd0ff,
+    0 0 32px #2affca;
+  font-size: 5rem;
+  overflow: hidden;
+  background-image: url(../img/bunny.gif);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: stretch;
+	image-rendering: pixelated;
+}
+
+
+
+.grid-container {	
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 10% 4rem 0 4rem;
+}
+
+@keyframes bunny-hop {
+  0%   { translate: 0 0;     scale: 1 1; }
+  10%  { translate: 0 0;     scale: 1.15 0.8; } 
+  30%  { translate: 0 -30px; scale: 0.9 1.15; }  
+  50%  { translate: 0 0;     scale: 1.15 0.85; }  
+  60%  { translate: 0 0;     scale: 1 1; }
+  75%  { translate: 0 -18px; scale: 0.95 1.08; } 
+  90%  { translate: 0 0;     scale: 1.08 0.92; }
+  100% { translate: 0 0;     scale: 1 1; }
+}
+
+.hop {
+  display: inline-block;
+  animation: bunny-hop 0.7s ease-out;
 }
